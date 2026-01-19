@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Начнем чуть сверху, чтобы при списке дел не уходило за экран */
+    min-height: 100vh;
+}
+
+/* ГЛАВНАЯ РАМКА (Карточка приложения) */
+.app-card {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08); /* Глубокая мягкая тень */
+    width: 100%;
+    max-width: 500px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column; /* Элементы друг под другом для чистоты */
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+/* Убедись, что li теперь не слишком широкие */
+li {
+    background-color: #f8f9fa; /* Сделаем задачи чуть серее на белом фоне */
+    border: 1px solid #eee;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px; /* Немного уменьшим отступы для аккуратности */
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.2);
+    margin: 0; /* УБИРАЕМ общий отступ */
+}
+
+#addButton {
+    margin-top: 25px;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-1px); /* Slight lift effect */
+}
+
+button:active {
+  transform: translateY(0); /* Pressed effect when clicked */
+  box-shadow: none;
+}
+
+ul {
+  padding: 0 0 0 40px ; /* Remove default padding */
+  margin: 0;
+}
+
+/* Контейнер для списка */
+ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    max-width: 500px; /* Ограничиваем ширину, чтобы список не был слишком широким */
+    margin-top: 20px;
+}
+
+/* Элемент списка (твоя белая карточка) */
+li {
+    display: flex; /* Делаем строку гибкой */
+    justify-content: space-between; /* Магия: текст влево, кнопка — вправо до упора */
+    align-items: center; /* Выравниваем их по центру по вертикали */
+    
+    background-color: #fff;
+    padding: 15px 20px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Мягкая тень как на твоем скрине */
+    width: 100%;
+    box-sizing: border-box; /* Чтобы padding не раздувал ширину */
+}
+
+/* Стиль для текста внутри li, чтобы он не слипался с кнопкой */
+li span, li {
+    font-size: 16px;
+    color: #333;
+    text-align: left; /* Текст всегда начинается слева */
+}
+
+input[type="text"] {
+    width: 100%;
+    max-width: 400px; /* Ограничиваем ширину, чтобы не растягивалось на весь экран */
+    padding: 12px 20px; /* Делаем поле "пухлым" и удобным для клика */
+    font-size: 16px;
+    border: 2px solid #e0e0e0; /* Светлая, аккуратная рамка */
+    border-radius: 25px; /* Закругляем так же, как и кнопки */
+    outline: none; /* Убираем стандартный черный контур при клике */
+    transition: all 0.3s ease; /* Плавный переход для фокуса */
+    box-sizing: border-box; /* Чтобы padding не увеличивал ширину */
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* Эффект при клике (фокусе) на поле */
+input[type="text"]:focus {
+    border-color: #007bff; /* Цвет рамки меняется на синий под цвет кнопок */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2); /* Легкое синее свечение */
+}
+
+/* Стиль для текста-подсказки (placeholder) */
+input[type="text"]::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
